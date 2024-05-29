@@ -1,0 +1,270 @@
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #221a36 !important;
+
+  &.plannetLinks {
+    .content {
+      padding-top: 45px;
+
+      @media (max-width: 1280px) {
+        padding-top: 45px;
+      }
+
+      @media (max-width: 1024px) {
+        padding-top: 50px;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &.planner {
+    .content {
+      padding-top: 50px;
+      padding-bottom: 80px;
+
+      @media (max-width: 1280px) {
+        padding-top: 50px;
+        padding-bottom: 80px;
+      }
+
+      @media (max-width: 1024px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .explanationText {
+      font-size: 22px;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px;
+
+  @media (max-width: 1280px) {
+    padding: 65px 50px 85px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 50px 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+  }
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Larsseit;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+
+  @media (max-width: 1280px) {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 45px;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+}
+
+.explanations {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  padding: 0 0 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  @media (max-width: 768px) {
+    padding: 0 0 40px;
+  }
+}
+
+.explanation {
+  color: var(--color-navy);
+  text-align: center;
+  font-family: Larsseit;
+  font-size: 30px;
+  line-height: normal;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  i {
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  b {
+    font-weight: 700;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.explanationText {
+  font-weight: 400;
+  white-space: pre-line;
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  i {
+    font-weight: 900;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.plannetWhiteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 50px;
+  .getStarted {
+    display: inline-flex;
+    padding: 15px 80px;
+    justify-content: center;
+    align-items: center;
+    color: #221a36;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Larsseit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 28.8px */
+    border-radius: 8px;
+    background: var(--color-white);
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      width: 100%;
+    }
+  }
+}
+
+.plannetBoxs {
+  margin: 0 0 60px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      > div {
+        text-align: center;
+        i {
+          width: 140px;
+          height: 140px;
+          border-radius: 100px;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          margin: 0 auto 40px;
+          background: rgba(255, 255, 255, 0.1);
+        }
+        h3 {
+          margin: 0 0 20px;
+          padding: 0;
+          display: block;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 30px;
+          color: #fff;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          display: block;
+          font-size: 30px;
+          font-weight: 400;
+          line-height: 38px;
+          color: #fff;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      display: block;
+      li {
+        padding: 0 0 30px;
+        width: 100%;
+        div {
+          i {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

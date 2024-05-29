@@ -1,0 +1,130 @@
+.answer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  margin-left: auto;
+}
+.image_avatar {
+  width: 32px;
+  height: 32px;
+  margin-bottom: auto;
+  border-radius: 6px;
+}
+.answer_block {
+  margin-right: 10px;
+}
+.cities_answer {
+  display: flex;
+  flex-direction: column;
+}
+.image_city {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 5px;
+  margin: auto 0;
+  display: flex;
+}
+
+.city_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.text_city_name {
+  font-size: 24px;
+}
+.text_country_name {
+  font-size: 20px;
+  opacity: 0.6;
+}
+.block_dropdown {
+  user-select: none;
+  margin-left: auto;
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 320px;
+}
+.dropdown_content {
+  background: var(--color-light-gray);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.option {
+  display: flex;
+  flex-direction: row;
+  background: var(--color-white);
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin: 10px 0;
+  img {
+    margin-right: 10px;
+  }
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  &:hover {
+    border: 1px solid var(--color-primary);
+  }
+}
+.text_option {
+  font-size: 24px;
+  color: var(--color-black);
+  white-space: nowrap;
+  &.delete {
+    color: var(--color-red);
+  }
+}
+
+.block_cities_answer {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 10px 12px;
+  border-radius: 20px;
+}
+.city {
+  display: flex;
+  flex-direction: row;
+}
+.text_add {
+  font-size: 18px;
+  font-family: 700;
+  margin-top: 5px;
+  cursor: pointer;
+  display: flex;
+  img {
+    margin-right: 6px;
+  }
+  div {
+    margin-top: 5px;
+  }
+}
+
+.text_time {
+  color: var(--color-black);
+  opacity: 0.6;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.text_range {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+@media (max-width: 540px) {
+  .text_city_name {
+    font-size: 20px;
+  }
+  .text_country_name {
+    font-size: 14px;
+  }
+}

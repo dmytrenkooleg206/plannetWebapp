@@ -1,0 +1,92 @@
+.block_date_helper {
+  padding: 50px 40px;
+}
+.question {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.image_question {
+  width: 32px;
+  height: 32px;
+  margin-top: auto;
+}
+.question_block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.text_question {
+  color: var(--color-primary);
+  background: rgba(116, 64, 245, 0.1);
+  padding: 10px 12px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.location_help {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 12px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  margin-right: auto;
+}
+
+.months_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.month_button {
+  width: calc(50% - 10px);
+  background: var(--color-white);
+  border: 1px solid #dcdee0;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 20px;
+  &.selected {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 5px double var(--color-white);
+    padding: 11px 15px;
+  }
+}
+
+.days_button {
+  width: 100%;
+  background: var(--color-white);
+  border: 1px solid #dcdee0;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 24px;
+  &.selected {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+@media (max-width: 540px) {
+  .block_date_helper {
+    padding: 30px 20px;
+  }
+  .month_button {
+    width: calc(50% - 6px);
+  }
+  .text_question {
+    font-size: 24px;
+  }
+}

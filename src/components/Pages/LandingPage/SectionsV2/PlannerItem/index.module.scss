@@ -1,0 +1,175 @@
+.item {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemInfo{
+  border-radius: 0px 0px 8px 8px;
+  background: var(--color-grey-1);
+  padding: 10px;
+  flex: 1;
+  position: relative;
+
+  @media (max-width: 768px){
+    padding: 8px 5px;
+  }
+}
+
+.plannerName {
+  font-family: Larsseit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-black);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+
+  @media (max-width: 1024px){
+    font-size: 22px;
+  }
+
+  @media (max-width: 768px){
+    font-size: 20px;
+    margin-bottom: 3.5px;
+    padding-right: 40px;
+  }
+}
+
+.check{
+  margin-left: 5px;
+
+  @media (max-width: 768px){
+    svg{
+      width: 20px;
+      height: auto;
+    }
+  }
+}
+
+.imageWrapper{}
+
+.imagePlanner {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px 8px 0 0;
+}
+
+.plannerLocation {
+  font-family: Larsseit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.7;
+  color: var(--color-black);
+  margin-bottom: 7px;
+  padding-right: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+
+  @media (max-width: 768px){
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-right: 0px;
+  }
+}
+
+.plannerDescription {
+  font-family: Larsseit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-black);
+
+  @media (max-width: 768px){
+    font-size: 16px;
+  }
+}
+
+.play_button {
+  position: relative;
+  margin-bottom: auto;
+}
+
+.circle {
+  width: 46px;
+  height: 46px;
+  background: var(--color-grey-1);
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  transform: translateY(1px);
+  &:hover {
+    background-color: rgba(116, 64, 245, 0.2);
+  }
+
+  @media (max-width: 768px){
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.audio_progressbar {
+  width: 46px;
+  position: relative;
+  transform: translateY(1px);
+
+  @media (max-width: 768px){
+    width: 33px;
+  }
+}
+
+.image_play_stop {
+  margin: auto;
+}
+
+.audioButton{
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  width: 46px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px){
+    width: 33px;
+    height: 34px;
+    right: 5px;
+    top: 3px;
+  }
+}
+
+.root{
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s;
+
+  &.visible{
+    pointer-events: auto;
+    opacity: 1;
+  }
+}

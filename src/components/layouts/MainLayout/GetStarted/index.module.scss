@@ -1,0 +1,111 @@
+.root {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 768px){
+    width: 300px;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+.content {
+  padding: 100px 30px 60px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px){
+    padding: 40px 20px;
+  }
+}
+
+.download{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+
+  a{
+    outline: none;
+    border: none;
+  }
+
+  img{
+    width: auto;
+    height: 76px;
+  }
+
+  @media (max-width: 768px){
+    margin-bottom: 25px;
+
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+}
+
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+
+  @media (max-width: 768px){
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.title{
+  font-family: Larsseit;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--color-navy);
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (max-width: 768px){
+    font-size: 30px;
+  }
+}
+
+.subtitle{
+  font-family: Larsseit;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-navy);
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (max-width: 768px){
+    font-size: 20px;
+  }
+}
+
+.phone{
+  font-family: Larsseit;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: var(--color-navy);
+
+  @media (max-width: 768px){
+    font-size: 20px;
+  }
+}

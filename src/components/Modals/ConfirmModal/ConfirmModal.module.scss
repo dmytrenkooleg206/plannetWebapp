@@ -1,0 +1,38 @@
+.content_trash {
+  background: rgba(255, 103, 103, 0.1);
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  margin: auto;
+  img {
+    margin: auto;
+  }
+}
+
+.text_remove {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--color-red);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.action_button {
+  width: calc(50% - 20px);
+}
+
+@media (max-width: 540px) {
+  .block_confirm {
+    padding: 30px 20px;
+  }
+  .action_button {
+    width: calc(50% - 10px);
+  }
+}

@@ -1,0 +1,154 @@
+.block_input {
+  position: relative;
+  z-index: 10;
+}
+
+.input_class {
+  width: 100%;
+  font-size: 24px !important;
+  font-family: Larsseit !important;
+  padding-left: 0px !important;
+  margin-left: 35px !important;
+  height: 100% !important;
+  border: none !important;
+  background: none !important;
+  z-index: 1;
+}
+
+.button_class {
+  background: none !important;
+  border: none !important;
+  padding: 2px 0 !important;
+  position: absolute !important;
+  width: 100%;
+  div {
+    margin-left: 5px !important;
+    padding: 0px !important;
+    border: none !important;
+  }
+}
+
+.continue_button {
+  display: flex!important;
+  border-radius: 8px;
+  background: #1F133E;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center!important;
+}
+
+.dropdown_class {
+  width: 100% !important;
+  font-size: 20px !important;
+  background: var(--color-light-gray) !important;
+  border-radius: 5px !important;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  max-height: 400px !important;
+  position: relative !important;
+  li {
+    margin: 10px !important;
+    background: var(--color-white) !important;
+    color: var(--color-black) !important;
+    padding: 15px 10px !important;
+    border-radius: 5px !important;
+    transition: 0.2s;
+    &:hover {
+      border: 1px solid var(--color-primary);
+      // background: none !important;
+    }
+  }
+}
+
+.search_class {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  background: var(--color-white);
+  border-radius: 8px !important;
+  // margin: 10px !important;
+  display: flex;
+  flex-direction: row;
+  input {
+    font-size: 20px !important;
+    width: 100%;
+    margin-right: 10px;
+    border: none !important;
+    padding: 0 0 0 10px !important;
+  }
+}
+
+.plannet-tel-input {
+  font-family: Larsseit;
+  // color: #000;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 24px;
+  left: 87px;
+  transform: translateY(calc(-50%));
+  width: 67%;
+  z-index: 1;
+  opacity: 0.4;
+  margin-left: -10px;
+}
+
+.plannet-tel-input::placeholder {
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .input_class {
+    font-size: 18px !important;
+    // padding: 10px 0 !important;
+  }
+
+  .continue_button {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center!important;
+  }
+
+  .plannet-tel-input {
+    font-size: 18px !important;
+    padding-left: 0px;
+  }
+
+  .button_class {
+    background: none !important;
+    border: none !important;
+    padding: 2px 0 !important;
+    position: absolute !important;
+    width: 100%;
+    div {
+      margin-left: 5px !important;
+      padding: 0px !important;
+      border: none !important;
+    }
+  }
+
+  .button_class {
+    div {
+      border: none !important;
+    }
+  }
+
+  .dropdown_class {
+    font-size: 18px !important;
+    // max-height: 300px !important;
+  }
+
+  .search_class {
+    input {
+      font-size: 18px !important;
+    }
+  }
+}
+
+.code{
+  opacity: 0;
+}

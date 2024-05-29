@@ -1,0 +1,25 @@
+
+.hotel{
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.hotelAccordian[aria-expanded="false"] {
+    border-radius: 15px !important;
+}
+
+
+
+.googleIconMap {
+    & div {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+  }
+
+  .circleContent {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+  }

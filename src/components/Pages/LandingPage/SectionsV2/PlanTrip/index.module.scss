@@ -1,0 +1,156 @@
+.root{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: calc(100vw * 0.66);
+  max-height: 100vh;
+
+  @media (max-width: 768px) {
+    max-height: unset;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.content{
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 100px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: 1280px){
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 1024px){
+    padding: 100px 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 100px 20px 156px;
+  }
+}
+
+.imageWrapper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+.textContainer{
+  width: 100%;
+  max-width: 980px;
+  border-radius: 25px;
+  background: var(--color-grey-2);
+  padding: 80px 20px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1024px){
+    padding: 70px 20px 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 15px;
+  }
+}
+
+.title{
+  font-family: Larsseit;
+  font-size: 125px;
+  line-height: normal;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+  white-space: pre-line;
+  text-align: center;
+
+  @media (max-width: 1280px){
+    font-size: 90px;
+  }
+
+  @media (max-width: 1024px){
+    font-size: 70px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+}
+
+.description{
+  font-family: Larsseit;
+  font-size: 40px;
+  line-height: normal;
+  font-weight: 400;
+  color: var(--color-navy);
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (max-width: 1280px){
+    font-size: 30px;
+  }
+
+  @media (max-width: 1024px){
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.getStarted{
+  font-family: Larsseit;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  padding: 15px 80px;
+  border-radius: 8px;
+  background: var(--color-navy);
+  width: fit-content;
+  cursor: pointer;
+
+  @media (max-width: 1280px){
+    font-size: 20px;
+    padding: 14px 70px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 15px 70px;
+  }
+}
+
+.slider{
+  height: 100%;
+
+  & > div{
+    height: 100%;
+
+    & > div{
+      height: 100%;
+    }
+  }
+}

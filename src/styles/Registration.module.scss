@@ -1,0 +1,33 @@
+.container_registration {
+  top: 0;
+  left: 0;
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+    89.49deg,
+    rgba(0, 0, 0, 0.6) 0.41%,
+    rgba(0, 0, 0, 0.6) 99.56%
+  );
+}
+.container_parent {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  background-image: url('/assets/images/backgrounds/image-1.webp');
+  -webkit-transition: background-image 2s ease-in-out 2s;
+  -moz-transition: background-image 2s ease-in-out 2s;
+  -o-transition: background-image 2s ease-in-out 2s;
+  transition: background-image 2s ease-in-out 2s;
+}

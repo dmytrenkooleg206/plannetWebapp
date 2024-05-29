@@ -1,0 +1,70 @@
+.block_learn_more {
+  position: relative;
+  background: url('/assets/images/onboarding/learn_more.png');
+  border-radius: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 49.17%,
+      #000000 100%
+    );
+    border-radius: 10px;
+  }
+}
+
+.block_content {
+  width: 100%;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.button_close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.image_how_plan {
+  margin: 50px auto 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text_how_plan {
+  font-size: 30px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.text_info {
+  color: var(--color-white);
+  font-size: 24px;
+  margin: auto 0 auto 10px;
+}
+
+@media (max-width: 540px) {
+  .block_content {
+    padding: 20px;
+  }
+}

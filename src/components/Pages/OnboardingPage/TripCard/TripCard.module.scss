@@ -1,0 +1,71 @@
+.trip_card {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  width: 340px;
+  margin: 30px auto 20px auto;
+}
+
+.block_trip_detail {
+  padding: 15px;
+  background: #f1ecfe;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.trip_detail {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 15px;
+}
+
+.trip_name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.trip_period {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px 0 5px 0;
+}
+
+.trip_when_start {
+  color: #a480ff;
+  margin-top: auto;
+}
+
+.trip_location {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.text_location {
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.text_hostedby {
+  font-size: 14px;
+  margin: auto 5px 0 auto;
+}
+
+.host_avatar {
+  width: 30px;
+  height: 30px;
+  background: #00cabe;
+  border-radius: 4px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 540px) {
+  .trip_card {
+    width: 100%;
+  }
+}

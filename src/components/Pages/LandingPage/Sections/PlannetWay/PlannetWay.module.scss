@@ -1,0 +1,146 @@
+.section_plannetway {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+
+.plannet_way {
+  margin: auto 50px;
+  padding: 50px 20px;
+  border: 5px solid var(--color-primary);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.text_title {
+  font-size: 30px;
+  line-height: 110%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.text_description {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+  span {
+    color: var(--color-primary);
+  }
+}
+
+.divider {
+  width: 46px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--color-primary);
+  opacity: 0.3;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto 30px auto;
+}
+
+.stores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  img {
+    margin: 0 10px;
+    max-width: 40%;
+  }
+}
+
+.button_plan {
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  background: var(--color-primary);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+  top: 0;
+  div {
+    color: var(--color-white);
+    font-size: 40px;
+    margin: auto 70px auto 20px;
+  }
+  img {
+    margin: auto 0;
+  }
+  &:hover {
+    top: -3px;
+  }
+  &:active {
+    top: 0;
+  }
+}
+
+.image_back_mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .text_title {
+    font-size: 20px;
+  }
+  .text_description {
+    font-size: 30px;
+  }
+  .section_plannetway {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .image_back {
+    display: none;
+  }
+  .image_back_mobile {
+    display: block;
+  }
+  .plannet_way {
+    margin: 20px;
+    width: calc(100% - 40px);
+    padding: 30px 10px;
+  }
+  .stores {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    img {
+      margin: 10px 0;
+      max-width: 100%;
+    }
+  }
+  .divider {
+    margin-bottom: 20px;
+  }
+  .button_plan {
+    padding: 8px 20px;
+    width: 100%;
+    img {
+      max-width: 26px !important;
+    }
+    div {
+      font-size: 30px;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1400px) {
+  .image_back {
+    max-width: 300px !important;
+  }
+  .text_title {
+    font-size: 24px;
+  }
+  .text_description {
+    font-size: 30px;
+  }
+}

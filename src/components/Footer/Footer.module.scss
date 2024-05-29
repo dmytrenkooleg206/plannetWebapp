@@ -1,0 +1,150 @@
+.footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 80px 20px;
+}
+
+.footer_desktop {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text_start_here {
+  font-size: 33px;
+}
+.text_copyright {
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.button_footer_nav {
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button_become {
+  font-size: 24px;
+  padding: 20px;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+.link_learnmore {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-top: 20px;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_mobile {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 870px) {
+  .footer {
+    padding: 40px 0px;
+  }
+  .footer_desktop {
+    display: none;
+  }
+  .footer_mobile {
+    display: block;
+  }
+  .image_logo {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .text_start_here {
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .stores {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .image_store {
+    max-width: calc(50% - 10px);
+    width: 100%;
+  }
+  .button_become {
+    font-size: 20px;
+    padding: 15px 10px;
+    margin: 15px 0;
+    width: 100%;
+  }
+  .link_learnmore {
+    font-size: 20px;
+  }
+  .navs {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .button_footer_nav {
+    margin: 10px 7px;
+  }
+  .divider_horizontal {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 2px;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+  .text_copyright {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 871px) and (max-width: 1120px) {
+  .button_footer_nav {
+    font-size: 20px !important;
+  }
+  .image_logo {
+    max-width: 200px;
+  }
+  .text_start_here {
+    font-size: 26px;
+  }
+  .text_copyright {
+    font-size: 14px;
+  }
+  .image_store {
+    max-width: 130px;
+  }
+  .button_become {
+    font-size: 18px;
+  }
+  .link_learnmore {
+    font-size: 18px;
+  }
+}

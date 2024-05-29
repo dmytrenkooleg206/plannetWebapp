@@ -1,0 +1,236 @@
+.cardBtn {
+  background-color: '#7440F5' !important;
+}
+
+.scrollContainer {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.hostedByContainer {
+  display: flex;
+  > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+
+.nameLogin {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  background: #000;
+}
+
+.noneNameImage {
+  display: flex!important;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mobBtnPrev {
+  bottom: -40px;
+  left: auto;
+  right: 45px;
+}
+
+.mobBtnNext {
+  bottom: -40px;
+}
+
+.fillHover:hover {
+  stroke: black;
+  transition: 0.5s ease;
+}
+
+.borderDiv {
+  position: relative;
+}
+
+.borderDiv:before {
+  content: '';
+  width: 3px;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #7440f5;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.welcomeTitle {
+  font-size: 40px;
+}
+
+
+.noRecordDiv {
+  
+  text-align: center;
+  align-items: center;
+  min-height: 300px;
+  height: 300px;
+  max-height: 300px;
+}
+
+.noRecordImg {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.noRecordImg img {
+  margin: 0 auto;
+}
+
+.headerLogo {
+  width: 170px;
+
+  height: auto;
+}
+
+.cities {
+  color: grey !important;
+}
+
+/*Slick*/
+
+.sliderDiv {
+  margin-right: 20px;
+  // padding: 0 14px;
+}
+
+/*slick ends*/
+
+.notif {
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #EC5B4C !important;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.truncate {
+  text-overflow: ellipsis ;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+div.tabmainDiv {
+  min-height: 540px;
+}
+
+@media only screen and (max-width: 900px) {
+  .NoTrip {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .welcomeTitle {
+    font-size: 24px;
+  }
+
+  .tab {
+    padding: auto 9px;
+  }
+
+  .noRecordDiv {
+    
+    text-align: center;
+    align-items: center;
+    min-height: 300px;
+    height: 300px;
+    max-height: 300px;
+  }
+
+  .noRecordImg {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .noRecordImg img {
+    top: 0;
+    left: 0;
+  }
+
+  .NoTrip {
+    width: 100% !important;
+  }
+
+  .headerLogo {
+    width: 114px;
+  }
+
+  .headerProfIconImg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .headerIconImg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .welcomeTitle {
+    font-size: 22px;
+  }
+
+  .tabBtn {
+    margin-right: 0;
+  }
+
+  .tab {
+    padding: auto 9px;
+  }
+
+  .NoTrip {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .tabBtn {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 469px) {
+  div.tabmainDiv > div:first-child {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .NoTrip {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .tabText {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}

@@ -1,0 +1,264 @@
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: calc(100vw * 0.74);
+  max-height: 100vh;
+  background: var(--color-black);
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.05) 39.51%
+    );
+  }
+
+  @media (max-width: 768px) {
+    max-height: unset;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 130px 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 1280px) {
+    padding: 130px 80px 50px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 130px 60px 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 110px 20px 20px;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  video,
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  video::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+
+  video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+
+  video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+}
+
+.muteSwitcher {
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  right: 80px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    bottom: 50px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (max-width: 768px) {
+    bottom: 100px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.textContainer {
+  width: 100%;
+  max-width: 510px;
+
+  &.animated {
+    .title {
+      animation: appear 0.5s 0s ease forwards;
+    }
+
+    .description {
+      animation: appear 0.5s 0.25s ease forwards;
+    }
+
+    .getStarted {
+      animation: appear 0.5s 0.5s ease forwards;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.blur {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(50px);
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.disappear {
+    animation: disappear 0.5s 0s ease-out forwards;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+
+.title {
+  font-family: Larsseit;
+  font-size: 100px;
+  line-height: normal;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  white-space: pre-line;
+  transform: translateY(20px);
+  opacity: 0;
+
+  @media (max-width: 1280px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 70px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+    margin-bottom: 17px;
+  }
+}
+
+.description {
+  font-family: Larsseit;
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  transform: translateY(20px);
+  opacity: 0;
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+}
+
+.getStarted {
+  font-family: Larsseit;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  padding: 15px 80px;
+  border-radius: 8px;
+  background: var(--color-navy);
+  width: fit-content;
+  cursor: pointer;
+  transform: translateY(20px);
+  opacity: 0;
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+    padding: 14px 70px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    padding: 14px 60px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+.player {
+}

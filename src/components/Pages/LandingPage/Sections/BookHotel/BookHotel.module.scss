@@ -1,0 +1,113 @@
+.section_book {
+  font-weight: 500;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+.text_title {
+  font-size: 30px;
+  line-height: 110%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.text_description {
+  font-size: 60px;
+  text-align: center;
+  line-height: 130%;
+  margin-bottom: 30px;
+}
+
+.divider {
+  width: 46px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--color-primary);
+  opacity: 0.3;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  background: var(--color-black);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.block_book {
+  width: 40%;
+  padding: 160px 0px 160px 60px;
+}
+.book_title {
+  font-size: 60px;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 140%;
+}
+.book_text {
+  font-size: 30px;
+  line-height: 130%;
+  color: var(--color-white);
+  font-weight: 400;
+  text-align: center;
+  span {
+    color: #ccb8ff;
+  }
+}
+.book_background {
+  width: 60%;
+  background-image: url('/assets/images/landingpage/book_back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 580px 200px 0 0;
+  border-color: var(--color-black) transparent transparent transparent;
+}
+
+/* Tablet and Smaller Desktop */
+/* Mobile */
+@media (max-width: 1010px) {
+  .text_title {
+    font-size: 20px;
+  }
+  .text_description {
+    font-size: 32px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .book_background {
+    width: 100%;
+    min-height: 380px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .block_book {
+    width: 100%;
+    padding: 40px 0;
+  }
+  .book_title {
+    font-size: 30px;
+  }
+  .book_text {
+    font-size: 24px;
+  }
+  .triangle {
+    display: none;
+  }
+  .section_book {
+    margin-bottom: 30px;
+  }
+}

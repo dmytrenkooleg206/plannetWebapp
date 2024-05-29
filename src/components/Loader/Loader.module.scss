@@ -1,0 +1,25 @@
+.loader {
+  cursor: not-allowed;
+  border-width: 3px !important;
+  border-color: rgb(255, 255, 255) rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.2) !important;
+  color: var(--color-white) !important;
+  margin: auto;
+  &.secondary {
+    border-color: rgb(0, 0, 0) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) !important;
+  }
+  &.white {
+    border-color: rgb(255, 255, 255) rgba(255, 255, 255, 0.2)
+      rgba(255, 255, 255, 0.2) !important;
+  }
+  &.gray {
+    border-color: #1F133E99 #1F133E99 #1F133E99 !important;
+  }
+}
+
+.block_loader {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

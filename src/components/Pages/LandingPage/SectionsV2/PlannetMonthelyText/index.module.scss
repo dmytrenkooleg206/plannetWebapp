@@ -1,0 +1,110 @@
+.title {
+  color: #221A36;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Larsseit;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 30px;
+
+  @media (max-width: 1280px) {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: 768px) {
+    text-align: left;
+    font-size: 40px;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+}
+
+.explanationText {
+  color: #221A36;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Larsseit;
+  font-style: normal;
+  font-weight: 400;
+  white-space: pre-line;
+  font-size: 30px;
+  line-height: normal;
+  margin-bottom: 30px;
+
+  @media (max-width: 1280px) {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 25px;
+    line-height: normal;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: 768px) {
+    text-align: left;
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+
+.getStarted {
+  display: inline-flex;
+  padding: 15px 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  color: var(--color-white);
+  border-radius: 8px;
+  background: var(--color-navy);
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    padding: 15px 70px;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  @media (max-width: 280px) {
+    padding: 6px 70px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 70px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+}
+
+.caption {
+  color: #221A36;
+  text-align: left;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Larsseit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    color: #1F133E;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,177 @@
+.faqContent {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 100px;
+  background-color: var(--color-navy);
+  gap: 30px;
+  min-height: 300px;
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+    gap: 15px;
+  }
+
+  .tabs {
+    list-style: none;
+    display: flex;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #ffffff1a;
+
+    @media (max-width: 768px) {
+      // max-width: 375px;
+      justify-content: center;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 23px 30px;
+      width: fit-content;
+      color: #fff;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Larsseit;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        padding: 14px 20px;
+        text-align: center;
+        justify-content: center;
+
+        &:first-child {
+          width: 30%;
+        }
+        &:nth-child(2) {
+          width: 30%;
+        }
+        &:last-child {
+          width: 40%;
+        }
+      }
+
+      &:first-child {
+        border-radius: 10px 0px 0px 10px;
+
+        @media (max-width: 768px) {
+          border-radius: 8px 0px 0px 8px;
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+
+        @media (max-width: 768px) {
+          border-radius: 0 8px 8px 0;
+        }
+      }
+
+      &.active {
+        background: #fff;
+        border-radius: 10px;
+        color: #1f133e;
+      }
+    }
+  }
+
+  .faqLists {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+
+    .faqItem {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+
+      .faqItemHeader {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 30px;
+
+        @media (max-width: 768px) {
+          padding: 10px;
+          gap: 18px;
+        }
+
+        p {
+          color: #fff;
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: Larsseit;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 48px */
+
+          @media (max-width: 768px) {
+            font-size: 20px;
+            max-width: calc(100% - 64px);
+          }
+        }
+
+        span {
+          cursor: pointer;
+
+          @media (max-width: 768px) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .devider {
+        width: calc(100% - 60px);
+        height: 1px;
+        background-color: #ffffff26;
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: -10px;
+
+        @media (max-width: 768px) {
+          width: calc(100% - 20px);
+          margin-top: -2px;
+          margin-bottom: -2px;
+        }
+      }
+
+      .faqDescription {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Larsseit;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 768px) {
+          padding: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

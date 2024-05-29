@@ -1,0 +1,17 @@
+.block_alert {
+  display: flex;
+  flex-direction: row;
+}
+
+.alert {
+  background: rgba(#ff4d42, 0.1);
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.text_alert {
+  color: var(--color-red);
+  margin: auto 0 auto 8px;
+}

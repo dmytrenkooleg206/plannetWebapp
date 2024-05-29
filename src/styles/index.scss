@@ -1,0 +1,674 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  // Colors
+  --color-primary: #7440f5;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-1: #FFFFFF1A;
+  --color-white-6: #FFFFFF99;
+  --color-green: #2ca251;
+  --color-light-gray: #f8f8f9;
+  --color-red: #ff4d42;
+  --color-hot: #ff4500;
+  --color-cold: #72ddf7;
+  --color-navy: #1f133e;
+  --color-purple: #160e2c;
+  --color-grey-1: #d4dde0;
+  --color-grey-2: rgba(212, 221, 224, 0.9);
+  --color-grey-3: #dcdee0;
+  --color-blue: #d4dffa;
+  --color-blue-2: #0036a3;
+
+  // Spacers
+  --spacer-xxs: calc(0.5 * var(--spacer-base));
+  --spacer-xs: calc(0.75 * var(--spacer-base));
+  --spacer-sm: calc(0.8 * var(--spacer-base));
+  --spacer-base: 1rem;
+  --spacer-md: calc(1.3 * var(--spacer-base));
+  --spacer-lg: calc(1.5 * var(--spacer-base));
+  --spacer-xl: calc(1.75 * var(--spacer-base));
+  --spacer-xxl: calc(2 * var(--spacer-base));
+  --spacer-xxxl: calc(3 * var(--spacer-base));
+
+  // Fonts
+  --font-size-xxs: var(--spacer-xxs);
+  --font-size-xs: var(--spacer-xs);
+  --font-size-sm: var(--spacer-sm);
+  --font-size-base: var(--spacer-base);
+  --font-size-md: var(--spacer-md);
+  --font-size-lg: var(--spacer-lg);
+  --font-size-xl: var(--spacer-xl);
+  --font-size-xxl: var(--spacer-xxl);
+  --font-size-xxxl: var(--spacer-xxxl);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  // overflow-y: hidden;
+  font-family: Larsseit;
+  // height: 100vh;
+  overscroll-behavior: none;
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit-Bold.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit-Bold.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit-Medium.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit-Medium.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit-Light.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit-Light.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit-Light.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/assets/fonts/Larsseit/Larsseit-Thin.eot');
+  src: url('/assets/fonts/Larsseit/Larsseit-Thin.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/fonts/Larsseit/Larsseit-Thin.woff2') format('woff2'),
+    url('/assets/fonts/Larsseit/Larsseit-Thin.woff') format('woff'),
+    url('/assets/fonts/Larsseit/Larsseit-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+.react-calendar {
+  font-family: Larsseit !important;
+  background: none !important;
+  border: none !important;
+  width: 100% !important;
+}
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  font-size: 30px;
+  font-weight: 100;
+  transition: 0.2s;
+  border-radius: 10px;
+
+  &:focus {
+    background: none !important;
+  }
+
+  &:hover {
+    background: var(--color-white) !important;
+    color: var(--color-navy) !important;
+  }
+}
+
+.react-calendar__navigation__label {
+  font-size: 30px !important;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:hover {
+    background: none !important;
+    color: var(--color-primary) !important;
+  }
+
+  &:focus {
+    background: none !important;
+  }
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 20px;
+  font-weight: 400;
+  color: #7e858c;
+
+  abbr {
+    text-decoration: none !important;
+  }
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: var(--color-black) !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #8e8e8e !important;
+}
+
+.react-calendar__tile--now {
+  background: none !important;
+}
+
+.react-calendar__tile--hover {
+  background: #e0e0e0 !important;
+}
+
+.react-calendar__month-view__days__day {
+  font-size: 20px;
+  padding: 5px !important;
+  aspect-ratio: 1/1;
+  margin: 4px 0 !important;
+}
+
+.react-calendar__tile--range {
+  color: var(--color-white) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.react-calendar__tile--rangeStart {
+  color: var(--color-navy) !important;
+  background: var(--color-white) !important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.react-calendar__tile--rangeEnd {
+  color: var(--color-navy) !important;
+  background: var(--color-white) !important;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.react-calendar__tile:disabled {
+  background: #c0c0c0 !important;
+  opacity: 0.2 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.dark {
+  .react-calendar__tile--hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: var(--color-white) !important;
+  }
+
+  .react-calendar__month-view__days__day {
+    color: var(--color-white) !important;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
+  .react-calendar__tile--rangeStart,
+  .react-calendar__tile--rangeEnd,
+  .react-calendar__tile--rangeBothEnds {
+    background: var(--color-primary) !important;
+
+    &:hover {
+      background: var(--color-primary) !important;
+    }
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #8e8e8e !important;
+  }
+
+  .react-calendar__century-view__decades__decade,
+  .react-calendar__decade-view__years__year,
+  .react-calendar__year-view__months__month {
+    &:hover {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
+  .react-calendar__tile--range {
+    &:hover {
+      background: rgba(116, 64, 245, 0.3) !important;
+    }
+  }
+
+  .react-calendar__tile:disabled {
+    background: gray !important;
+  }
+}
+
+.summary-calender .react-calendar__month-view__days__day--weekend {
+  color: #fff !important;
+}
+.summary-calender .react-calendar__month-view__days__day--weekend:hover {
+  color: var(--color-navy) !important;
+}
+
+.summary-calender
+  .react-calendar__month-view__days__day--weekend.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575 !important;
+}
+
+.summary-calender .react-calendar__tile:enabled:hover,
+.summary-calender .react-calendar__tile--hover {
+  background: rgba(255, 255, 255) !important;
+}
+
+.summary-calender .react-calendar__tile:enabled:focus {
+  background: rgba(255, 255, 255) !important;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  color: var(--color-navy) !important;
+}
+
+.summary-calender .react-calendar__month-view__weekdays__weekday {
+  font-size: 16px !important;
+}
+
+.summary-calender .react-calendar__month-view__days__day {
+  font-size: 16px !important;
+  padding: 3px !important;
+  line-height: 18px;
+}
+
+.summary-calender
+  .react-calendar__tile.react-calendar__month-view__days__day:hover {
+  color: var(--color-navy) !important;
+}
+
+.summary-calender .react-calendar__navigation__label {
+  font-size: 24px !important;
+}
+
+.summary-calender .react-calendar__navigation button:disabled {
+  background-color: #f0f0f029;
+}
+
+.pac-container.pac-logo {
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #000;
+  z-index: 9999;
+  padding: 10px;
+  margin: 0 auto !important;
+  box-shadow: none !important;
+}
+
+.pac-container.pac-logo::after {
+  display: none;
+}
+
+.pac-container.pac-logo .pac-item {
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 0;
+  padding: 11px 10px;
+  margin: 0;
+  border-bottom: 1px solid #f8f8f9;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.pac-container.pac-logo .pac-item span.pac-item-query {
+  font-size: 15px;
+}
+
+.pac-container.pac-logo .pac-item span.pac-icon.pac-icon-marker {
+  display: none;
+}
+
+.pac-container.pac-logo .pac-item:hover {
+  background: transparent;
+}
+
+.selected-flag {
+  background: none !important;
+
+  &:hover {
+    background: none !important;
+  }
+
+  &:focus {
+    background: none !important;
+  }
+}
+
+.mobBtnPrev {
+  bottom: -40px;
+  left: auto;
+  right: 45px;
+}
+
+.mobBtnNext {
+  bottom: -40px;
+}
+
+.slick-slider.slick-initialized .slick-dots {
+  bottom: 10%;
+}
+
+.slick-dots li button:before {
+  opacity: 0.75;
+  color: #ffff;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #7440f5;
+}
+
+.hotelSlider {
+  & .slick-list {
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+  }
+}
+
+.slick-dots-arrow {
+  z-index: 99999;
+}
+
+.slider-container {
+  .slick-dots {
+    display: none;
+  }
+}
+
+.slickDots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -58px;
+
+  & li:not(.slick-active) {
+    display: none !important;
+  }
+
+  & li button:before {
+    display: none !important;
+  }
+}
+
+div.slick-slide.slick-active {
+  & .childSlider {
+    display: block;
+  }
+}
+
+div.slick-slide:not(.slick-active) {
+  & .childSlider {
+    display: none;
+  }
+}
+
+div.slick-slide:not(.slick-active) {
+  & .slick-accordion {
+    display: none !important;
+  }
+}
+
+div.main-summary-container {
+  background-color: #1f133e;
+
+  & > div {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0px 10px 10px rgb(0 0 0 / 0.5);
+  }
+}
+
+.summary-login .react-tel-input .country-list .country .dial-code {
+  color: #fff !important;
+  font-size: 18px;
+}
+
+.summary-login .country-name {
+  color: #ffffff8a !important;
+  font-size: 18px;
+}
+
+.summary-login .react-tel-input .flag-dropdown.open {
+  border-bottom: 1px #ffffff1a solid !important;
+}
+
+.fixed-button {
+  width: calc(500px - 35px);
+  position: fixed;
+  bottom: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .fixed-button {
+    width: 92vw;
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+.customSliderNumber {
+  ul {
+    & li {
+      justify-content: center;
+      width: 100%;
+      & button {
+        margin: 0;
+      }
+      & button::before {
+        content: unset !important;
+      }
+    }
+  }
+  & div.slick-dots {
+    & li.slick-active {
+      display: flex;
+    }
+    & li:not(.slick-active) {
+      display: none;
+    }
+  }
+}
+
+.hotelSliderDashboard {
+  & .slick-next {
+    right: 20px;
+    z-index: 9999999999;
+    &::before {
+      font-size: 30px;
+    }
+  }
+  & .slick-prev {
+    left: 0px;
+    z-index: 9999999999;
+    &::before {
+      font-size: 30px;
+    }
+  }
+  & .bottomContent {
+    display: flex;
+    justify-content: space-between;
+    // margin: 1px 1rem;
+    // padding-bottom: 1rem;
+    & button {
+      width: 26px;
+      height: 26px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & svg {
+        font-size: 18px;
+        color: #000;
+      }
+    }
+  }
+}
+
+.selectHotel {
+  display: flex;
+  text-decoration: underline;
+  color: #fff;
+  cursor: pointer;
+}
+
+.breakDescription {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.breakExpDescription {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.button-disabled {
+  background-color: gray !important;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 420px) {
+  .imgeContainer {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+.centerContent {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pac-container.hdpi.pac-logo {
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid var(--color-navy);
+  border-top: none;
+  box-shadow: none;
+  transform: translateY(5px);
+
+  .pac-item {
+    font-family: Larsseit;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
+    color: var(--color-navy);
+    letter-spacing: 0.5px;
+  }
+}
+
+.payment-info {
+  color: rgba(255, 255, 255, 0.6);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Larsseit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

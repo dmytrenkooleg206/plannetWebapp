@@ -1,0 +1,35 @@
+.block_button {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // margin: 15px 0;
+}
+
+.block_icon_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.content_button {
+  width: calc(50% - 8px);
+  &:focus{
+    background-color: '#7440f5' !important;
+  }
+}
+
+.content_icon_button {
+  width: calc(50% - 8px);
+}
+
+@media (max-width: 540px) {
+  .block_button {
+    flex-direction: column;
+  }
+  .content_button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

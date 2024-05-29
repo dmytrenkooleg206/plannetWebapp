@@ -1,0 +1,113 @@
+.block_input {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .input_class {
+    width: calc(100% - 55px) !important;
+    font-size: 17px !important;
+    font-family: Larsseit !important;
+    padding: 18px 0 15px 0 !important;
+    margin-left: 55px !important;
+    height: 100% !important;
+    border: none !important;
+    background: none !important;
+    z-index: 1;
+  }
+  input.input_class::placeholder{
+    color: red;
+  }
+  
+  .button_class {
+    background: none !important;
+    border: none !important;
+    padding: 2px 0 !important;
+    position: absolute !important;
+    width: 100%;
+    div {
+      margin-left: 10px !important;
+      border: none !important;
+    }
+  }
+  
+  .dropdown_class {
+    width: 100% !important;
+    font-size: 18px !important;
+    background: #362d51 !important;
+    // border-radius: 5px !important;
+    margin: 3px 0 !important;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    max-height: 400px !important;
+    position: relative !important;
+    li {
+      padding: 10px !important;
+      background: none !important;
+      color: text-white-600 !important;
+      border-bottom: 1px #FFFFFF1A solid !important;
+      border-radius: 0px !important;
+      transition: 0.2s;
+    }
+  }
+  
+  .search_class {
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    background: var(--color-white);
+    border-radius: 8px !important;
+    // margin: 10px !important;
+    display: flex;
+    flex-direction: row;
+    input {
+      font-size: 20px !important;
+      width: 100%;
+      margin-right: 10px;
+      border: none !important;
+      padding: 0 0 0 10px !important;
+    }
+  }
+  
+  .plannet-tel-input {
+    font-family: Larsseit;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 67%;
+    z-index: 1;
+    opacity: 0.4;
+  }
+  
+  
+  @media (max-width: 540px) {
+    .input_class {
+      font-size: 18px !important;
+      padding: 10px 0 !important;
+    }
+    .plannet-tel-input {
+      font-size: 18px !important;
+      padding-left: 0px;
+      top: 48%;
+    }
+  
+    .button_class {
+      div {
+        border: none !important;
+      }
+    }
+  
+    .dropdown_class {
+      font-size: 18px !important;
+      max-height: 300px !important;
+    }
+  
+    .search_class {
+      input {
+        font-size: 18px !important;
+      }
+    }
+  }
+  

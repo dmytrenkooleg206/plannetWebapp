@@ -1,0 +1,96 @@
+.airport_search {
+  width: 400px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  margin: 1px auto;
+  padding: 15px 20px;
+  background: var(--color-white);
+  img {
+    padding-right: 20px;
+  }
+  input {
+    width: 100%;
+    font-size: 24px;
+    font-family: Larsseit;
+    border: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--color-black);
+      opacity: 0.2;
+    }
+  }
+  &:focus-within {
+    border-color: var(--color-primary);
+  }
+}
+
+.button_img {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.active {
+  border-color: var(--color-primary);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search_dropdown {
+  padding: 20px 10px;
+  position: absolute;
+  background: var(--color-white);
+  top: 100%;
+  left: -1px;
+  width: calc(100% + 2px);
+  border: 1px solid var(--color-primary);
+  z-index: 1;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.text_airport {
+  padding: 16px 10px;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  &:hover {
+    color: var(--color-primary);
+    background: rgba(116, 64, 245, 0.1);
+    border-radius: 5px;
+  }
+}
+
+.outside {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: gray;
+}
+
+.no_airport {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 540px) {
+  .airport_search {
+    width: 100%;
+  }
+}
