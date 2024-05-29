@@ -22,15 +22,9 @@ type PaymentsRegisterProps = {
   onSetPhoneCode: Function;
 };
 
-const stripe = require('stripe')(
-  // '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',
-  'sk_test_51KbV8eBVdnPoK2qmRTCXydtXBPoSy2mcE8RKxZzzPUrJnNFSFPEpJV87hgBJVAtHQ74JZuiEU6vQHxqGfnioWC8600hDMeIpn0',
-);
+const stripe = require('stripe')(process.env.NEXT_PUBLIC_STRIPE_SECRETE_KEY);
 
-const stripePromise = loadStripe(
-  // 'pk_live_51KbV8eBVdnPoK2qmn12rcl1CbZm80dSSqUTFHZ173LBEamZgEdliX5aXwLW3b9uNtW8IahQXIEmoXQuQYf8Gwzhn00dEjV1LRH',
-  'pk_test_51KbV8eBVdnPoK2qmWkdhotiZd9Ie541Oo3jyo5r1PsFHSXnrQUFIogK8nLRRsfc8YzyficMb4u5JSh3UY4DSSi4000X2oR1bOm',
-);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_SECRETE_KEY);
 
 let didMount = false;
 export default function PaymentsRegister({

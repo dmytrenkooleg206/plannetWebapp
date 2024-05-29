@@ -34,10 +34,7 @@ type PaymentProccessProps = {
   onVerifyShow: Function;
 };
 
-const stripe = require('stripe')(
-  // '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',
-  'sk_test_51KbV8eBVdnPoK2qmRTCXydtXBPoSy2mcE8RKxZzzPUrJnNFSFPEpJV87hgBJVAtHQ74JZuiEU6vQHxqGfnioWC8600hDMeIpn0',
-);
+const stripe = require('stripe')(process.env.NEXT_PUBLIC_STRIPE_SECRETE_KEY);
 
 export default function PaymentProccess({
   phoneCode,
